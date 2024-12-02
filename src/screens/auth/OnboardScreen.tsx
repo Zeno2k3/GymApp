@@ -17,6 +17,7 @@ import {
     View
 } from 'react-native';
 import Swiper from 'react-native-swiper';
+import { appColors } from '../../constants/appColor';
 
 type RootStackParamList = {
     LoginScreen: undefined; // Home screen doesn’t expect any parameters
@@ -24,7 +25,6 @@ type RootStackParamList = {
 };
 
 const { width } = Dimensions.get('window');
-
 const slides = [
     {
         id: 0,
