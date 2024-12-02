@@ -16,7 +16,7 @@ enableScreens();
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Provider } from 'react-redux';
-import AuthNavigator from './src/navigator/AuthNavigator';
+import AuthNavigator from './src/navigators/AuthNavigator';
 import store from './src/redux/store';
 import { SplashScreen } from './src/screens';
 

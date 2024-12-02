@@ -2,8 +2,8 @@ import { View, Text, StyleProp, ViewStyle, TextStyle, TouchableOpacity } from 'r
 import React, { ReactNode } from 'react'
 
 interface Props {
-    icon?: ReactNode,
     text: string,
+    icon?: ReactNode,
     textComment ?: string,
     color?: string,
     styles?: StyleProp<ViewStyle>
@@ -17,9 +17,7 @@ const ButtonComponent = (props : Props) => {
     const {icon, text, textComment, styles, textColor, textStyles, iconFlex, onPress} = props
     return (
         <TouchableOpacity
-        
-        >
-            
+        >         
         </TouchableOpacity> 
     )
 }
