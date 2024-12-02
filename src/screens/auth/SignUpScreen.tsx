@@ -191,8 +191,6 @@ export default function SignUpScreen(props: any): React.JSX.Element {
                         <BtnColor name='Sign Up' />
                     </TouchableOpacity>
                 </View>
-
-
                 {
                     isLoading && (
                         <LoadingScreen visible={isLoading} message='Sign Up...' style={styles.indicatorContainer} />

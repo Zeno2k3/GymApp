@@ -1,30 +1,12 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import { View, Text } from 'react-native'
+import React from 'react'
 
-import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
-
-
-function HomeScreen(): React.JSX.Element {
+const HomeScreen = () => {
   return (
     <View>
-      <Text>Home</Text>
+      <Text>HomeScreen</Text>
     </View>
-  );
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default HomeScreen;
+export default HomeScreen
