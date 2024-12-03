@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React, { useEffect, useState } from 'react';
 import {
   StatusBar,
@@ -28,16 +21,12 @@ function App(): React.JSX.Element {
       setIsShowSplash(false)
     }, 3000)
   })
-
-  const Stack = createNativeStackNavigator();
   return (
     <Provider store={store}>
       <StatusBar
         barStyle="dark-content"
         backgroundColor="transparent"
         translucent />
-
-
       {isShowSplash ? <SplashScreen /> :
         <AuthNavigator />
         // <SignUpScreen />

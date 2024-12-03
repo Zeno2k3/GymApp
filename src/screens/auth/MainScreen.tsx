@@ -1,38 +1,25 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import { View, Text } from 'react-native'
+import React from 'react'
+import { ButtonComponent } from '../../components'
+import { appColors } from '../../constants/appColor'
 
-import React from 'react';
-import {
-    SafeAreaView,
-    StyleSheet,
-    Text,
-    TouchableOpacity
-} from 'react-native';
-import { appFontFamilies } from '../../constants/appFontFamilies';
 
-export default function MainScreen(props: any): React.JSX.Element {
-    const { navigation } = props
-    return (
-        <SafeAreaView>
-            <TouchableOpacity onPress={() => { navigation.goBack() }}>
-                <Text style={
-                    { 
-                        fontSize: 60, 
-                        fontFamily: appFontFamilies.light 
-                    }}>MainScreen Return</Text>
-            </TouchableOpacity>
-        </SafeAreaView>
-    );
+const MainScreen = () => {
+  return (
+    <View
+    style= {{
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+      }}>
+        <ButtonComponent
+        type='a'
+        text='Continue' 
+        onPress={() => console.log('main Screen')}
+        textComment='aksd'
+        />
+    </View>
+  )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        // flex: 1,
-    },
-});
-
-
+export default MainScreen
