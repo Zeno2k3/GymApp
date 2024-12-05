@@ -44,7 +44,7 @@ const FocusArenaScreen = ({navigation}: any) => {
   };
 
   return (
-    <ContainerComponent step = {1} steps={8} percent={10} >
+    <ContainerComponent step = {1} steps={8} percent={10} isScrollView = {true}>
       <SpaceComponent height={30} />
       <SectionComponent
         styles={{

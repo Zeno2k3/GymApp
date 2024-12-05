@@ -17,11 +17,12 @@ interface Props {
   title ?: string
   step ?: number
   steps ?: number
+  isScrollView ?: boolean
   onPress ?: () => void
 }
 
 const ContainerComponent = (props: Props) => {
-  const {children, back, title, step, steps, onPress, percent} = props
+  const {children, back, title, step, steps, onPress, percent, isScrollView} = props
   const headerComponent = () => {
     return (
     <View
@@ -50,13 +51,25 @@ const ContainerComponent = (props: Props) => {
             }/>
         </RowComponent>
         <SpaceComponent height={20}/>
+        {
+        isScrollView ?
         <ScrollView
+        showsVerticalScrollIndicator = {false}
         style={{
           flex: 1,
           backgroundColor: appColors.white
         }}>
           {children}
-        </ScrollView>
+        </ScrollView> : 
+        <View
+        style={{
+          flex: 1,
+          backgroundColor: appColors.white
+        }}
+        >
+          {children}
+        </View>
+        }
       </View>
       )
   }

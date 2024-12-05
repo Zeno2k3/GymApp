@@ -9,8 +9,6 @@ import {
     WorkoutGoalScreen,
     WorkoutPlanScreen
 } from "../screens"
-
-
 const SetingNavigator = () => {
     const Stack = createNativeStackNavigator()
     return (

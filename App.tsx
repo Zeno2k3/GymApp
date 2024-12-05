@@ -29,7 +29,6 @@ function App(): React.JSX.Element {
         translucent />
       {isShowSplash ? <SplashScreen /> :
         <AuthNavigator />
-        // <SignUpScreen />
       }
     </Provider>
   );

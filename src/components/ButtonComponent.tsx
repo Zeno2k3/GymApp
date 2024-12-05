@@ -5,6 +5,7 @@ import TextComponet from './TextComponent'
 import LinearGradient from 'react-native-linear-gradient'
 import { appColors } from '../constants/appColor'
 import { appFontFamilies } from '../constants/appFontFamilies'
+import SpaceComponent from './SpaceComponent'
 
 
 interface Props {
@@ -18,10 +19,11 @@ interface Props {
     iconFlex?: 'right' | 'left'
     onPress?: () => void
     type?: 'a' | 'b' | 'c'
+    suffix?: ReactNode
 }
 
 const ButtonComponent = (props: Props) => {
-    const { icon, text, textComment, styles, textColor, textStyles, iconFlex, onPress, type } = props
+    const { icon, text, textComment, styles, textColor, textStyles, iconFlex, onPress, type , suffix} = props
     return (
         type === 'a' ? (
             <TouchableOpacity
@@ -86,6 +88,7 @@ const ButtonComponent = (props: Props) => {
                 style={[
                     globalStyles.button,
                     {
+                        justifyContent: 'flex-start',
                         minWidth: 339,
                     },
                     styles
@@ -93,8 +96,9 @@ const ButtonComponent = (props: Props) => {
                 onPress={onPress}>
                 {icon && icon}
                 <View style = {{
-                    flexDirection: 'column',
-                    paddingHorizontal: 16
+                    justifyContent: 'flex-start',
+                    alignItems: 'flex-start',
+                    paddingHorizontal: 12
                 }}>
                     <TextComponet
                         text={text}
@@ -117,7 +121,14 @@ const ButtonComponent = (props: Props) => {
                         }
                     >{textComment}</Text>
                 </View>
+                <View style= {{
+                      flex: 1,
+                      alignItems: 'flex-end',
+                   }}>
+                  {suffix??suffix}
+                </View>
             </TouchableOpacity>
+            
             )
     )
 }
