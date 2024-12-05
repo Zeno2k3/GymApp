@@ -20,9 +20,9 @@ const TextComponet = (props: Props) => {
                 [
                     globalStyles.text,
                     {
-                        color: color ?? appColors.gray,
-                        fontSize: size ?? title ? 26 : 16,
-                        fontFamily: font ?? title ? appFontFamilies.Blod : appFontFamilies.regular
+                        color: color ?? appColors.black,
+                        fontSize: size ?? title ? 26 : 14,
+                        fontFamily: font ? font : title ? appFontFamilies.medium : appFontFamilies.regular
                     },
                     styles
                 ]

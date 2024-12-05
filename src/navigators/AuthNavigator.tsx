@@ -17,21 +17,21 @@ import {
   LoginScreen,
   SignInScreen,
   SignUpScreen,
-  MainScreen,
   ForgotPassScreen,
   EnterOTP,
   NewPass,
   AllSet
 } from '../screens/index'
+import SetingNavigator from './SetingNavigator';
 
 type RootStackParamList = {
   OnboardScreen: undefined;
   LoginScreen: undefined;
   SignInScreen: undefined;
   SignUpScreen: undefined;
-  MainScreen: undefined;
   ForgotPassScreen: undefined;
   EnterOTP: undefined;
+  SetingNavigator:  undefined;
   NewPass: undefined;
   AllSet: undefined;
 };
@@ -49,7 +49,7 @@ function AuthNavigator(): React.JSX.Element {
         <Stack.Screen name='LoginScreen' component={LoginScreen} />
         <Stack.Screen name='SignInScreen' component={SignInScreen} />
         <Stack.Screen name='SignUpScreen' component={SignUpScreen} />
-        <Stack.Screen name='MainScreen' component={MainScreen} />
+        <Stack.Screen name='SetingNavigator' component={SetingNavigator} />
         <Stack.Screen name='ForgotPassScreen' component={ForgotPassScreen} />
         <Stack.Screen name='EnterOTP' component={EnterOTP} />
         <Stack.Screen name='NewPass' component={NewPass} />

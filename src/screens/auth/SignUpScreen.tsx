@@ -78,7 +78,7 @@ export default function SignUpScreen(props: any): React.JSX.Element {
             waitSignUp(true)
         }
         if (!isLoading && checkFormat()) {
-            navigation.popTo('MainScreen')
+            navigation.navigate('SetingNavigator')
         }
     }
 

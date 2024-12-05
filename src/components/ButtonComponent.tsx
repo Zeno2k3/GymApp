@@ -5,7 +5,7 @@ import TextComponet from './TextComponent'
 import LinearGradient from 'react-native-linear-gradient'
 import { appColors } from '../constants/appColor'
 import { appFontFamilies } from '../constants/appFontFamilies'
-import { useTheme } from '@react-navigation/native'
+
 
 interface Props {
     text: string,
@@ -24,44 +24,48 @@ const ButtonComponent = (props: Props) => {
     const { icon, text, textComment, styles, textColor, textStyles, iconFlex, onPress, type } = props
     return (
         type === 'a' ? (
+            <TouchableOpacity
+            style={[
+              {
+                alignItems: 'center',
+                justifyContent: 'center',
+              },
+              styles,
+            ]}
+            onPress={onPress}
+          >
             <LinearGradient
-                start={{ x: 0.0, y: 0.0 }}
-                end={{ x: 0.7, y: 1.0 }}
-                colors={[appColors.blue2, appColors.blue3]}
-                style={{
-                    borderRadius: 1000,
-                    minWidth: 339,
-                }}
+              start={{ x: 0.0, y: 0.0 }}
+              end={{ x: 0.7, y: 1.0 }}
+              colors={[appColors.blue2, appColors.blue3]}
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: 1000,
+                minWidth: 339,
+                paddingVertical: 12, 
+                paddingHorizontal: 16,
+              }}
             >
-                <TouchableOpacity
-                    style={[
-                        globalStyles.button,
-                        {
-                            borderWidth: 0,
-                            flexDirection: 'row',
-                        },
-                        styles
-                    ]}
-                    onPress={onPress}>
-                    {icon && icon}
-                    <TextComponet
-                        text={text}
-                        color={textColor ?? appColors.white}
-                        styles={[
-                            textStyles,
-                            { marginLeft: icon && iconFlex === 'left' ? 12 : 0 }
-                        ]}
-                        font={appFontFamilies.Blod}
-                    />
-                    {icon && iconFlex === 'right' && icon}
-                </TouchableOpacity>
+              {icon && iconFlex === 'left' && <View style={{ marginRight: 12 }}>{icon}</View>}
+              <TextComponet
+                text={text}
+                color={textColor ?? appColors.white}
+                styles={[
+                  textStyles,
+                  { 
+                    marginLeft: icon && iconFlex === 'left' ? 12 : 0,
+                  },
+                ]}
+                font={appFontFamilies.Blod}
+              />
+              {icon && iconFlex === 'right' && <View style={{ marginLeft: 12 }}>{icon}</View>}
             </LinearGradient>
+          </TouchableOpacity>          
         ) : type === 'b' ? (<TouchableOpacity
             style={[
                 globalStyles.button,
-                {
-
-                },
                 styles
             ]}
             onPress={onPress}>
@@ -71,7 +75,7 @@ const ButtonComponent = (props: Props) => {
                 color={textColor ?? appColors.black}
                 styles={[
                     textStyles,
-                    { marginLeft: icon && iconFlex === 'left' ? 12 : 0 }
+                    {marginLeft: icon && iconFlex === 'left' ? 12 : 0 }
                 ]}
                 font={appFontFamilies.medium}
             />

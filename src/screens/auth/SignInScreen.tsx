@@ -69,7 +69,7 @@ export default function SignInScreen(props: any): React.JSX.Element {
       toHomeScreen(true)
     }
     if (!isLoading && checkFormat()) {
-      navigation.popTo('MainScreen')
+      navigation.navigate('SetingNavigator')
     }
   }
 
