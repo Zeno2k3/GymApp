@@ -106,7 +106,8 @@ const ButtonComponent = (props: Props) => {
                         styles=
                         {[
                             textStyles,
-                            { marginLeft: icon && iconFlex === 'left' ? 12 : 0 }
+                            { fontSize:20,
+                              marginLeft: icon && iconFlex === 'left' ? 12 : 0 }
                         ]}
                         font={appFontFamilies.medium}
                     />

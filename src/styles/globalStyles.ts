@@ -17,7 +17,7 @@ export const globalStyles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         paddingHorizontal: 16,
-        paddingVertical: 16,
+        paddingVertical: 12,
         borderRadius: 12,
         borderWidth: 1,
         borderColor: appColors.textBtnLog,
@@ -35,5 +35,15 @@ export const globalStyles = StyleSheet.create({
     row: {
         flexDirection: 'row',
         justifyContent: 'flex-start'
-    }
+    },
+    shadow: {
+        shadowColor: 'rbga(0,0,0,0.5)',
+        shadowOffset: {
+            width: 0,
+            height: 4
+        },
+        shadowRadius: 8,
+        shadowOpacity: 0.25,
+        elevation: 6
+    },
 })

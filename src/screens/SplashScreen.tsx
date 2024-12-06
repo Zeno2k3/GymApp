@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React, { useEffect, useState } from 'react';
 import {
     Image,
@@ -20,7 +13,7 @@ function SplashScreen(): React.JSX.Element {
     useEffect(() => {
         const interval = setInterval(() => {
             setDots((prev) => (prev.length < 3 ? prev + '.' : ''))
-        }, 500); // Thời gian đổi dấu chấm là 500ms
+        }, 500); 
 
         return () => clearInterval(interval);
     }, []);

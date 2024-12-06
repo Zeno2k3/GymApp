@@ -2,6 +2,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import {
     ActiviLevelScreen,
     AgeScreen,
+    EndSetingScreen,
     FocusArenaScreen,
     HeightScreen,
     ManyPushUpScreen,
@@ -9,6 +10,7 @@ import {
     WorkoutGoalScreen,
     WorkoutPlanScreen
 } from "../screens"
+import MainNavigator from "./MainNavigator"
 const SetingNavigator = () => {
     const Stack = createNativeStackNavigator()
     return (
@@ -24,6 +26,8 @@ const SetingNavigator = () => {
             <Stack.Screen name="WorkoutGoalScreen" component={WorkoutGoalScreen} />
             <Stack.Screen name="ManyPushUpScreen" component={ManyPushUpScreen} />
             <Stack.Screen name="WorkoutPlanScreen" component={WorkoutPlanScreen} />
+            <Stack.Screen name="EndSetingScreen" component={EndSetingScreen} />
+            <Stack.Screen name="MainNavigator" component={MainNavigator} />
         </Stack.Navigator>
     )
 }

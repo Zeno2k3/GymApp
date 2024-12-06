@@ -27,7 +27,7 @@ function App(): React.JSX.Element {
         barStyle="dark-content"
         backgroundColor="transparent"
         translucent />
-      {isShowSplash ? <SplashScreen /> :
+      {isShowSplash ? <SplashScreen/> :
         <AuthNavigator />
       }
     </Provider>

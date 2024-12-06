@@ -9,13 +9,14 @@ import SignUpScreen from "./auth/SignUpScreen";
 import HomeScreen from "./home/HomeScreen";
 import AgeScreen from "./seting/AgeScreen";
 import HeightScreen from "./seting/HeightScreen";
-import SplashScreen from "./SplashScreen";
 import FocusArenaScreen from "./seting/FocusArenaScreen";
 import WeightScreen from "./seting/WeightScreen";
 import ActiviLevelScreen from "./seting/ActiviLevelScreen";
 import WorkoutGoalScreen from "./seting/WorkoutGoalScreen";
 import ManyPushUpScreen from "./seting/ManyPushUpScreen";
 import WorkoutPlanScreen from "./seting/WorkoutPlanScreen";
+import EndSetingScreen from "./seting/EndSetingScreen";
+import SplashScreen from "./SplashScreen";
 
 
 export {
@@ -35,4 +36,5 @@ export {
     WorkoutGoalScreen,
     ManyPushUpScreen,
     WorkoutPlanScreen,
+    EndSetingScreen,
 }
