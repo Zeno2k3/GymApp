@@ -17,6 +17,10 @@ import ManyPushUpScreen from "./seting/ManyPushUpScreen";
 import WorkoutPlanScreen from "./seting/WorkoutPlanScreen";
 import EndSetingScreen from "./seting/EndSetingScreen";
 import SplashScreen from "./SplashScreen";
+import SetingsScreen from "./settings/SetingsScreen";
+import ReportsScreen from "./reports/ReportsScreen";
+import FoodScreen from "./food/FoodScreen";
+import WorkoutsScreen from "./workouts/WorkoutsScreen";
 
 
 export {
@@ -37,4 +41,8 @@ export {
     ManyPushUpScreen,
     WorkoutPlanScreen,
     EndSetingScreen,
+    SetingsScreen,
+    ReportsScreen,
+    FoodScreen,
+    WorkoutsScreen
 }
