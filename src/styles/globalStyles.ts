@@ -44,6 +44,28 @@ export const globalStyles = StyleSheet.create({
         },
         shadowRadius: 8,
         shadowOpacity: 0.25,
-        elevation: 6
+        elevation: 10
     },
+    shadow2: {
+        shadowColor: 'rbga(0,0,0,0.9)',
+        shadowOffset: {
+            width: 10,
+            height: 4
+        },
+        shadowRadius: 100,
+        shadowOpacity: 1,
+        elevation: 1
+    },
+    item: {
+        width: 159,
+        height: 162,
+        backgroundColor: appColors.gray2,
+        borderRadius: 8,
+    },
+    item2: {
+        width: 288,
+        height: 343,
+        borderRadius: 8,
+    }
+
 })

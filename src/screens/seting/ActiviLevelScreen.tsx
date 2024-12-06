@@ -32,7 +32,6 @@ const ActiviLevelScreen = ({ navigation }: any) => {
         styles={{
           justifyContent: 'center',
           alignItems: 'center',
-          
         }}
       >
         <TextComponent text="Select Your Activity Level" title />
@@ -48,7 +47,6 @@ const ActiviLevelScreen = ({ navigation }: any) => {
                 icon={button.iconPath}
                 key={button.id}
                 styles={{
-                  
                   borderColor:
                     selectedButton === button.id
                       ? appColors.blue 

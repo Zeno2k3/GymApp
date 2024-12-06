@@ -25,7 +25,13 @@ import Thongbao from '../Svg/thongbao.svg'
 import LoseWeight from '../Svg/LoseWeight.svg'
 import Other from '../Svg/Other.svg'
 import StayFit from '../Svg/StayFit.svg'
-
+import Time from '../Svg/time.svg'
+import Kalo from '../Svg/Kalo.svg'
+import Nen from '../Svg/nen.svg'
+import Lock23 from '../Svg/lock.svg'
+import Colen from '../Svg/colen.svg'
+import Outher from '../Svg/outher.svg'
+import Line from '../Svg/Line.svg'
 export {
     Athlete,
     LightlyActive,
@@ -53,5 +59,12 @@ export {
     Thongbao,
     LoseWeight,
     Other,
-    StayFit
+    StayFit,
+    Time,
+    Kalo,
+    Nen,
+    Lock23,
+    Colen,
+    Outher,
+    Line,
 }

@@ -26,8 +26,7 @@ const TextComponet = (props: Props) => {
                     },
                     styles
                 ]
-            }
-        >{text}</Text>
+            }>{text}</Text>
     )
 }
 

@@ -10,7 +10,13 @@ const MyPlanNavigator = () => {
         headerShown: false
     }}>
         <Stack.Screen name='HomeScreen' component={HomeScreen}/>
-        <Stack.Screen name='BaiTapScreen' component={BaiTapScreen}/>
+        <Stack.Screen 
+        name='BaiTapScreen' 
+        component={BaiTapScreen}
+        options={{
+          
+        }} 
+        />
     </Stack.Navigator>
   )
 }

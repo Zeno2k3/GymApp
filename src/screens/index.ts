@@ -22,6 +22,9 @@ import ReportsScreen from "./reports/ReportsScreen";
 import FoodScreen from "./food/FoodScreen";
 import WorkoutsScreen from "./workouts/WorkoutsScreen";
 import BaiTapScreen from './home/BaiTapScreen'
+import FoodItem from "./food/components/FoodItem";
+import WorkItem from "./workouts/components/WorkItem";
+import HeaderWork from "./workouts/components/HeaderWork";
 
 
 export {
@@ -47,4 +50,7 @@ export {
     FoodScreen,
     WorkoutsScreen,
     BaiTapScreen,
+    FoodItem,
+    WorkItem,
+    HeaderWork,
 }

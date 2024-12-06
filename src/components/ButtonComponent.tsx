@@ -9,129 +9,120 @@ import SpaceComponent from './SpaceComponent'
 
 
 interface Props {
-    text: string,
-    icon?: ReactNode,
-    textComment ?: string,
-    color?: string,
-    styles?: StyleProp<ViewStyle>
-    textColor?: string
-    textStyles?: StyleProp<TextStyle>
-    iconFlex?: 'right' | 'left'
-    onPress?: () => void
-    type?: 'a' | 'b' | 'c'
-    suffix?: ReactNode
-    isComment ?: boolean
+  text: string,
+  icon?: ReactNode,
+  textComment?: string,
+  color?: string,
+  styles?: StyleProp<ViewStyle>
+  textColor?: string
+  textStyles?: StyleProp<TextStyle>
+  iconFlex?: 'right' | 'left'
+  onPress?: () => void
+  type?: 'a' | 'b' | 'c'
+  suffix?: ReactNode
+  isComment?: boolean
+  size?: number
+  isLineGradient ?: boolean
 }
 
 const ButtonComponent = (props: Props) => {
-    const { icon, text, textComment, styles, textColor, textStyles, iconFlex, onPress, type , suffix, isComment} = props
-    return (
-        type === 'a' ? (
-            <TouchableOpacity
-            style={[
+  const { icon, text, textComment, styles, textColor, textStyles, iconFlex, onPress, type, suffix, isComment, size , isLineGradient} = props
+  return (
+    type === 'a' ? (
+      <TouchableOpacity
+        style={[
+          {
+            alignItems: 'center',
+            justifyContent: 'center',
+          },
+          styles,
+        ]}
+        onPress={onPress}
+      >
+        <LinearGradient
+          start={{ x: 0.0, y: 0.0 }}
+          end={{ x: 0.7, y: 1.0 }}
+          colors = {(!isLineGradient) 
+          ? [appColors.blue2, appColors.blue3] 
+          : [appColors.gray2, appColors.gray2]}
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderRadius: 1000,
+            minWidth: size ? size : 339,
+            paddingVertical: 12,
+            paddingHorizontal: 16,
+          }}
+        >
+          {icon && iconFlex === 'left' && <View style={{ marginRight: 12 }}>{icon}</View>}
+          <TextComponet
+            text={text}
+            color={textColor ?? appColors.white}
+            styles={[
+              textStyles,
               {
-                alignItems: 'center',
-                justifyContent: 'center',
+                marginLeft: icon && iconFlex === 'left' ? 12 : 0,
               },
-              styles,
             ]}
-            onPress={onPress}
-          >
-            <LinearGradient
-              start={{ x: 0.0, y: 0.0 }}
-              end={{ x: 0.7, y: 1.0 }}
-              colors={[appColors.blue2, appColors.blue3]}
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: 1000,
-                minWidth: 339,
-                paddingVertical: 12, 
-                paddingHorizontal: 16,
-              }}
-            >
-              {icon && iconFlex === 'left' && <View style={{ marginRight: 12 }}>{icon}</View>}
-              <TextComponet
-                text={text}
-                color={textColor ?? appColors.white}
-                styles={[
-                  textStyles,
-                  { 
-                    marginLeft: icon && iconFlex === 'left' ? 12 : 0,
-                  },
-                ]}
-                font={appFontFamilies.Blod}
-              />
-              {icon && iconFlex === 'right' && <View style={{ marginLeft: 12 }}>{icon}</View>}
-            </LinearGradient>
-          </TouchableOpacity>          
-        ) : type === 'b' ? (<TouchableOpacity
-            style={[
-                globalStyles.button,
-                styles
+            font={appFontFamilies.Blod}
+          />
+          {icon && iconFlex === 'right' && <View style={{ marginLeft: 12 }}>{icon}</View>}
+        </LinearGradient>
+      </TouchableOpacity>
+    ) : type === 'b' ? (<TouchableOpacity
+      style={[
+        globalStyles.button,
+        styles
+      ]}
+      onPress={onPress}>
+      {icon && icon}
+      <TextComponet
+        text={text}
+        color={textColor ?? appColors.black}
+        styles={[
+          textStyles,
+          { marginLeft: icon && iconFlex === 'left' ? 12 : 0 }
+        ]}
+        font={appFontFamilies.medium}
+      />
+      {icon && iconFlex === 'right' && icon}
+    </TouchableOpacity>
+    ) :
+      (<TouchableOpacity
+        style={[
+          globalStyles.button,
+          {
+            justifyContent: 'flex-start',
+            minWidth: 339,
+          },
+          styles
+        ]}
+        onPress={onPress}>
+        {icon && icon}
+        <View style={{
+          justifyContent: 'flex-start',
+          alignItems: 'flex-start',
+          paddingHorizontal: 12
+        }}>
+          <TextComponet
+            text={text}
+            color={textColor ?? appColors.black}
+            styles=
+            {[
+              textStyles,
+              {
+                fontSize: 20,
+                marginLeft: icon && iconFlex === 'left' ? 12 : 0
+              }
             ]}
-            onPress={onPress}>
-            {icon && icon}
-            <TextComponet
-                text={text}
-                color={textColor ?? appColors.black}
-                styles={[
-                    textStyles,
-                    {marginLeft: icon && iconFlex === 'left' ? 12 : 0 }
-                ]}
-                font={appFontFamilies.medium}
-            />
-            {icon && iconFlex === 'right' && icon}
-        </TouchableOpacity>
-        ) :
-            (<TouchableOpacity
-                style={[
-                    globalStyles.button,
-                    {
-                        justifyContent: 'flex-start',
-                        minWidth: 339,
-                    },
-                    styles
-                ]}
-                onPress={onPress}>
-                {icon && icon}
-                <View style = {{
-                    justifyContent: 'flex-start',
-                    alignItems: 'flex-start',
-                    paddingHorizontal: 12
-                }}>
-                    <TextComponet
-                        text={text}
-                        color={textColor ?? appColors.black}
-                        styles=
-                        {[
-                            textStyles,
-                            { fontSize:20,
-                              marginLeft: icon && iconFlex === 'left' ? 12 : 0 }
-                        ]}
-                        font={appFontFamilies.medium}
-                    />
-                    {icon && iconFlex === 'right' && icon}
-                    { isComment ??
-                    (<Text style =
-                        {
-                          {
-                            fontFamily: appFontFamilies.regular,
-                            color: appColors.gray2
-                          }
-                        }>{textComment}</Text>)
-                    }
-                </View>)
-                <View style= {{
-                      flex: 1,
-                      alignItems: 'flex-end',
-                   }}>
-                  {suffix??suffix}
-                </View>
-            </TouchableOpacity>
-            
-            )
-    )
+            font={appFontFamilies.medium}
+          />
+          {icon && iconFlex === 'right' && icon}
+          {isComment ?? <Text style={{ fontFamily: appFontFamilies.regular, color: appColors.gray2 }}>{textComment}</Text>}
+        </View>
+        <View style={{ flex: 1, alignItems: 'flex-end' }}>{suffix ?? suffix}</View>
+      </TouchableOpacity>)
+  )
 }
 export default ButtonComponent
