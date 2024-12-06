@@ -18,9 +18,10 @@ const TabNavigator = () => {
         <Tab.Navigator screenOptions={({route}) => ({
             headerShown: false,
             tabBarStyle: {
+                borderTopWidth: 0,
                 height: 80,
                 justifyContent: 'center',
-                alignItems: 'center'
+                alignItems: 'center',
             },
             tabBarIcon:({focused, color, size}) => {
                 let icon: ReactNode;
@@ -72,5 +73,4 @@ const TabNavigator = () => {
         </Tab.Navigator>
     )
 }
-
 export default TabNavigator

@@ -21,6 +21,7 @@ import SetingsScreen from "./settings/SetingsScreen";
 import ReportsScreen from "./reports/ReportsScreen";
 import FoodScreen from "./food/FoodScreen";
 import WorkoutsScreen from "./workouts/WorkoutsScreen";
+import BaiTapScreen from './home/BaiTapScreen'
 
 
 export {
@@ -44,5 +45,6 @@ export {
     SetingsScreen,
     ReportsScreen,
     FoodScreen,
-    WorkoutsScreen
+    WorkoutsScreen,
+    BaiTapScreen,
 }

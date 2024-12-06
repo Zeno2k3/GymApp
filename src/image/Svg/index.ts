@@ -20,6 +20,12 @@ import Foodlink from '../Svg/Foodlink.svg'
 import Food from '../Svg/Food.svg'
 import Settingslink from '../Svg/Settingslink.svg'
 import Settings from '../Svg/Settings.svg'
+import Sloger from '../Svg/Sloger.svg'
+import Thongbao from '../Svg/thongbao.svg'
+import LoseWeight from '../Svg/LoseWeight.svg'
+import Other from '../Svg/Other.svg'
+import StayFit from '../Svg/StayFit.svg'
+
 export {
     Athlete,
     LightlyActive,
@@ -42,5 +48,10 @@ export {
     Food,
     Foodlink,
     Settings,
-    Settingslink
+    Settingslink,
+    Sloger,
+    Thongbao,
+    LoseWeight,
+    Other,
+    StayFit
 }

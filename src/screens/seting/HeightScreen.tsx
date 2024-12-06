@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   ButtonComponent,
   ContainerComponent,
@@ -7,8 +7,6 @@ import {
 import SectionComponent from '../../components/SectionComponent'
 import { appColors } from '../../constants/appColor'
 import SpaceComponent from '../../components/SpaceComponent'
-
-
 
 const HeightScreen = ({ navigation }: any) => {
   return (

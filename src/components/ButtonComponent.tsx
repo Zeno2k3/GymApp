@@ -11,7 +11,7 @@ import SpaceComponent from './SpaceComponent'
 interface Props {
     text: string,
     icon?: ReactNode,
-    textComment?: string,
+    textComment ?: string,
     color?: string,
     styles?: StyleProp<ViewStyle>
     textColor?: string
@@ -20,10 +20,11 @@ interface Props {
     onPress?: () => void
     type?: 'a' | 'b' | 'c'
     suffix?: ReactNode
+    isComment ?: boolean
 }
 
 const ButtonComponent = (props: Props) => {
-    const { icon, text, textComment, styles, textColor, textStyles, iconFlex, onPress, type , suffix} = props
+    const { icon, text, textComment, styles, textColor, textStyles, iconFlex, onPress, type , suffix, isComment} = props
     return (
         type === 'a' ? (
             <TouchableOpacity
@@ -112,16 +113,16 @@ const ButtonComponent = (props: Props) => {
                         font={appFontFamilies.medium}
                     />
                     {icon && iconFlex === 'right' && icon}
-                    <Text
-                        style=
+                    { isComment ??
+                    (<Text style =
                         {
-                            {
-                                fontFamily: appFontFamilies.regular,
-                                color: appColors.gray2
-                            }
-                        }
-                    >{textComment}</Text>
-                </View>
+                          {
+                            fontFamily: appFontFamilies.regular,
+                            color: appColors.gray2
+                          }
+                        }>{textComment}</Text>)
+                    }
+                </View>)
                 <View style= {{
                       flex: 1,
                       alignItems: 'flex-end',

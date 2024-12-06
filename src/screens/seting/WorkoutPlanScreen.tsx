@@ -29,5 +29,4 @@ const WorkoutPlanScreen = ({navigation}: any) => {
         </ContainerComponent>
       )
 }
-
 export default WorkoutPlanScreen
