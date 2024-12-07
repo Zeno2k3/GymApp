@@ -25,6 +25,7 @@ import BaiTapScreen from './home/BaiTapScreen'
 import FoodItem from "./food/components/FoodItem";
 import WorkItem from "./workouts/components/WorkItem";
 import HeaderWork from "./workouts/components/HeaderWork";
+import ExemItem from "./workouts/components/ExemItem";
 
 
 export {
@@ -53,4 +54,5 @@ export {
     FoodItem,
     WorkItem,
     HeaderWork,
+    ExemItem
 }

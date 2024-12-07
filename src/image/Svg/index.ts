@@ -32,6 +32,7 @@ import Lock23 from '../Svg/lock.svg'
 import Colen from '../Svg/colen.svg'
 import Outher from '../Svg/outher.svg'
 import Line from '../Svg/Line.svg'
+import Group from '../Svg/Group.svg'
 export {
     Athlete,
     LightlyActive,
@@ -67,4 +68,5 @@ export {
     Colen,
     Outher,
     Line,
+    Group,
 }

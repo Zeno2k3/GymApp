@@ -24,17 +24,21 @@ const HeaderWork = (props : Props) => {
   return (
     <ImageBackground
     style = {{
-      flex: 0.3,
+      flex: 0.4,
       paddingVertical: 50,
       width: appInfors.sizes.WIDTH,
-      backgroundColor: appColors.black
+      backgroundColor: appColors.black,
       }}
     resizeMode='contain'
     source={pathimage}>
     <StatusBar barStyle='light-content'
     backgroundColor="transparent"
     translucent />
-    <SectionComponent>
+    <SectionComponent
+        styles = {{
+            flex: 1,
+        }}
+        >
         <TouchableOpacity
             style = {{
                 paddingHorizontal: 30,
