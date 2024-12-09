@@ -7,6 +7,7 @@ import {
 import SectionComponent from '../../components/SectionComponent'
 import { appColors } from '../../constants/appColor'
 import SpaceComponent from '../../components/SpaceComponent'
+import SelectScrollComponent from './components/SelectScrollComponent'
 
 const WeightScreen = ({ navigation }: any) => {
   return (
@@ -24,6 +25,7 @@ const WeightScreen = ({ navigation }: any) => {
           color={appColors.gray2}
         />
       </SectionComponent>
+      <SelectScrollComponent start={20} end={200} type={'200'}/>
       <ButtonComponent text="Continue" type="a"
         onPress={() => navigation.navigate('ActiviLevelScreen')} />
       <SpaceComponent height={30} />

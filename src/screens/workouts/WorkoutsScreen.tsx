@@ -1,23 +1,39 @@
-import { View, Text, Image } from 'react-native'
+import {ScrollView } from 'react-native'
 import React from 'react'
-import FoodItem from '../food/components/FoodItem'
-import { appColors } from '../../constants/appColor'
+
 import SpaceComponent from '../../components/SpaceComponent'
-import WorkItem from './components/WorkItem'
+
 import ExemItem from './components/ExemItem'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 
 const WorkoutsScreen = () => {
   return (
-    <View
-    style = {{
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: appColors.white
-    }}>
+    <SafeAreaView
+     style={{justifyContent:'center', alignItems: 'center'}}>
+       <ScrollView
+       showsVerticalScrollIndicator = {false}
+       >
      <ExemItem title={'Incline Push-Up'} content={'3 Sets x 12 reps'} path={require('../../image/expushUp21.png')}/>
-    </View>
+     <SpaceComponent height={30}/>
+      <ExemItem title={'Push-Up'} content={'1 Sets x 12 reps'} path={require('../../image/expushUp22.png')}/>
+      <SpaceComponent height={30}/>
+      <ExemItem title={'Wide Arm Push-Up'} content={'1 Sets x 12 reps'} path={require('../../image/expushUp23.png')}/>
+      <SpaceComponent height={30}/>
+      <ExemItem title={'Decline Push-Up'} content={'2 Sets x 8 reps'} path={require('../../image/expushUp24.png')}/>
+      <SpaceComponent height={30}/>
+      <ExemItem title={'Diamond Push-Up'} content={'1 Sets x 12 reps'} path={require('../../image/expushUp25.png')}/>
+      <SpaceComponent height={30}/>
+      <ExemItem title={'Wall Push-Up'} content={'3 Sets x 12 reps'} path={require('../../image/expushUp26.png')}/>
+      <SpaceComponent height={30}/>
+      <ExemItem title={'Decline Push-Up'} content={'2 Sets x 8 reps'} path={require('../../image/expushUp24.png')}/>
+      <SpaceComponent height={30}/>
+      <ExemItem title={'Diamond Push-Up'} content={'1 Sets x 12 reps'} path={require('../../image/expushUp25.png')}/>
+      <SpaceComponent height={30}/>
+      <ExemItem title={'Wall Push-Up'} content={'3 Sets x 12 reps'} path={require('../../image/expushUp26.png')}/>
+    </ScrollView>
+    </SafeAreaView>
+   
   )
 }
 

@@ -34,6 +34,22 @@ const SelectScrollComponent = (props: Props) => {
         overflow: 'hidden'
       }}>
         {items}
+        <View style ={
+          {
+            borderTopColor: appColors.blue2,
+            borderBottomColor: appColors.blue2,
+            borderWidth: 2,
+            borderLeftColor: appColors.white,
+            borderRightColor: appColors.white,
+            width: appInfors.sizes.WIDTH * 0.6,
+            height: 80,
+            position: 'absolute',
+            left: 60,
+            top: 180,
+
+
+          }
+        }/>
       </ScrollView>;
 }
 

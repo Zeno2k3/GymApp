@@ -7,6 +7,7 @@ import {
 import SectionComponent from '../../components/SectionComponent'
 import { appColors } from '../../constants/appColor'
 import SpaceComponent from '../../components/SpaceComponent'
+import SelectScrollComponent from './components/SelectScrollComponent'
 
 const HeightScreen = ({ navigation }: any) => {
   return (
@@ -24,6 +25,7 @@ const HeightScreen = ({ navigation }: any) => {
           color={appColors.gray2}
         />
       </SectionComponent>
+      <SelectScrollComponent start={100} end={200} type={''}/>
       <ButtonComponent text="Continue" type="a"
         onPress={() => navigation.navigate('WeightScreen')} />
       <SpaceComponent height={30} />
